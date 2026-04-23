@@ -1,0 +1,506 @@
+{% extends 'base.html' %} {% block content %}
+<div class="accueil-container">
+  <!-- Hero Section Moderne -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <span class="hero-badge">Bibliothèque 3.0</span>
+      <h1>Bienvenue à la<br>Bibliothèque Numérique</h1>
+      <p>Gérez vos auteurs, livres et emprunts dans une interface intuitive et moderne</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Livres</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">45+</span>
+          <span class="stat-label">Auteurs</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">120+</span>
+          <span class="stat-label">Lecteurs</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Cartes Modernes -->
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon authors-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="card-badge">Gestion</span>
+      </div>
+      <h3>Auteurs</h3>
+      <p>Gérez l'ensemble des auteurs de votre bibliothèque. Ajoutez, modifiez et organisez leurs informations.</p>
+      <div class="card-footer">
+        <a href="/auteurs/" class="btn-card">
+          <span>Explorer les auteurs</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon books-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20V18H4V6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 10H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="card-badge">Catalogue</span>
+      </div>
+      <h3>Livres</h3>
+      <p>Explorez et gérez votre collection de livres. Consultez les détails, disponibilités et emprunts.</p>
+      <div class="card-footer">
+        <a href="/livres/" class="btn-card">
+          <span>Parcourir les livres</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon loans-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 12V8H4V12M20 12L4 12M20 12L18 20H6L4 12M12 16H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="card-badge">Suivi</span>
+      </div>
+      <h3>Emprunts</h3>
+      <p>Suivez tous les emprunts et retours. Gérez les prêts et consultez l'historique complet.</p>
+      <div class="card-footer">
+        <a href="/emprunts/" class="btn-card">
+          <span>Voir les emprunts</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Guide Interactive -->
+  <div class="guide-section">
+    <div class="guide-header">
+      <h3>Comment utiliser l'application ?</h3>
+      <p>Guide rapide pour bien démarrer</p>
+    </div>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h4>Gestion des auteurs</h4>
+          <p>Consultez la liste des auteurs, ajoutez de nouveaux profils et gérez les informations des auteurs existants.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h4>Administration des livres</h4>
+          <p>Gérez votre catalogue, ajoutez de nouveaux titres, mettez à jour les informations et suivez la disponibilité.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h4>Suivi des emprunts</h4>
+          <p>Enregistrez les prêts, gérez les retours et consultez l'historique complet des transactions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Variables globales */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary: #667eea;
+  --primary-dark: #5a67d8;
+  --secondary: #764ba2;
+  --dark: #1a202c;
+  --gray: #718096;
+  --light-gray: #f7fafc;
+  --border: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--dark);
+}
+
+.accueil-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Hero Section Modernisée */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  margin-bottom: -50px;
+  box-shadow: var(--shadow-xl);
+}
+
+.hero-content {
+  padding: 80px 60px 100px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.hero-section h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Cartes Modernes */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 35px 30px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.authors-icon {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.books-icon {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.loans-icon {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.card-badge {
+  background: var(--light-gray);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.card p {
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+.btn-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: white;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border);
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-card:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateX(5px);
+}
+
+.btn-card svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-card:hover svg {
+  transform: translateX(3px);
+}
+
+/* Section Guide */
+.guide-section {
+  background: white;
+  border-radius: 32px;
+  margin: 0 30px 40px;
+  padding: 50px;
+  box-shadow: var(--shadow-lg);
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.guide-header h3 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.guide-header p {
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--light-gray);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.step-content p {
+  color: var(--gray);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards-container {
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .hero-content {
+    padding: 60px 40px 80px;
+  }
+  
+  .hero-section h1 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .hero-stats {
+    gap: 30px;
+  }
+  
+  .hero-section h1 {
+    font-size: 32px;
+  }
+  
+  .guide-section {
+    padding: 30px 20px;
+    margin: 0 20px 30px;
+  }
+  
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .hero-content {
+    padding: 50px 20px 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero-section h1 {
+    font-size: 28px;
+  }
+  
+  .card {
+    padding: 25px 20px;
+  }
+}
+</style>
+{% endblock %}
